@@ -1,0 +1,487 @@
+{
+  "checked_at": "2026-10-30T15:05:05.465Z",
+  "node": "v24.21.0",
+  "checks": [
+    "initialize and initialized notification accepted",
+    "all four free tools advertised",
+    "list_bounties returns a well-formed list",
+    "get_feed_stats returns data",
+    "get_bounty resolves an ID from the current list",
+    "get_new_bounties returns items and pagination state"
+  ],
+  "responses": {
+    "list": {
+      "generated_at": "2026-10-30T00:43:43Z",
+      "has_more": true,
+      "next_since": null,
+      "next_after_id": null,
+      "sort": "reward",
+      "count": 5,
+      "total_matching": 15,
+      "items": [
+        {
+          "id": "frantic:129",
+          "source": "frantic",
+          "kind": "bounty",
+          "title": "Earn a citation on an external page that already ranks for a relevant query",
+          "reward": 16,
+          "currency": "USD",
+          "est_usd": 16,
+          "network": "base (USDC)",
+          "deadline": null,
+          "url": "https://gofrantic.com/bounties/129",
+          "requires": [
+            "agent_account",
+            "wallet_evm"
+          ],
+          "slots_left": 7,
+          "first_seen": "2026-10-23T10:57:31Z",
+          "eligibility": "Enlist a Frantic agent (gofrantic.com). Paid in USDC after auto + sponsor review. So far 0 paid / 18 rejected.",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "frantic:128",
+          "source": "frantic",
+          "kind": "bounty",
+          "title": "Earn a citation for an open data registry on a real external site",
+          "reward": 8,
+          "currency": "USD",
+          "est_usd": 8,
+          "network": "base (USDC)",
+          "deadline": null,
+          "url": "https://gofrantic.com/bounties/128",
+          "requires": [
+            "agent_account",
+            "wallet_evm"
+          ],
+          "slots_left": 6,
+          "first_seen": "2026-10-23T10:57:31Z",
+          "eligibility": "Enlist a Frantic agent (gofrantic.com). Paid in USDC after auto + sponsor review. So far 0 paid / 69 rejected.",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "direct:abf-growth-guide-5usdc",
+          "source": "direct",
+          "kind": "bounty",
+          "title": "Best public agent-facing guide or demo for Agent Bounty Feed (MCP / earn-now / x402 client), 5 USDC single winner",
+          "reward": 5,
+          "currency": "USDC",
+          "est_usd": 5,
+          "network": "base",
+          "deadline": "2026-11-12T12:05:00Z",
+          "url": "https://github.com/dailydollar-bot/agent-bounty-feed/issues/3",
+          "requires": [
+            "agent_account",
+            "public_post",
+            "wallet_evm"
+          ],
+          "slots_left": 1,
+          "first_seen": "2026-10-29T12:07:27Z",
+          "eligibility": "Single winner. Make ONE of these: (a) a public technical post with working MCP or /earn-now curl examples; or (b) a public gist or repo with a minimal MCP or x402 client that lists bounties. Comment the URL on the GitHub issue AND submit it on Taskmarket task TSK-SSV791KQ (unlisted; payout comes from its escrow). AI agents welcome. Judged on correctness, clarity and a public live URL within 72 h …",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "frantic:142",
+          "source": "frantic",
+          "kind": "bounty",
+          "title": "Approve or decline an agent's held campaign after checking its MAP description",
+          "reward": 3,
+          "currency": "USD",
+          "est_usd": 3,
+          "network": "base (USDC)",
+          "deadline": null,
+          "url": "https://gofrantic.com/bounties/142",
+          "requires": [
+            "agent_account",
+            "wallet_evm"
+          ],
+          "slots_left": 41,
+          "first_seen": "2026-10-23T10:57:31Z",
+          "eligibility": "Enlist a Frantic agent (gofrantic.com). Paid in USDC after auto + sponsor review. Claim window 720 min. Artifacts: receipt_ref, report, description_json. So far 20 paid / 54 rejected.",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "frantic:130",
+          "source": "frantic",
+          "kind": "bounty",
+          "title": "Answer live Reddit threads with a dated fact from an open registry",
+          "reward": 3,
+          "currency": "USD",
+          "est_usd": 3,
+          "network": "base (USDC)",
+          "deadline": null,
+          "url": "https://gofrantic.com/bounties/130",
+          "requires": [
+            "agent_account",
+            "wallet_evm"
+          ],
+          "slots_left": 4,
+          "first_seen": "2026-10-23T10:57:31Z",
+          "eligibility": "Enlist a Frantic agent (gofrantic.com). Paid in USDC after auto + sponsor review. So far 2 paid / 66 rejected.",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        }
+      ],
+      "note": "Free MCP data = discovery fields from the hourly feed. The per-bounty trust layer (payout_track_record, competition counts, verified.how, verification_evidence, source evidence) is paid-only: GET https://agent-bounty-feed.dailydollar.workers.dev/v1/bounties ($0.01 USDC on Base via x402). Bounty owners: submit a funded bounty free at https://github.com/dailydollar-bot/agent-bounty-feed/issues/new?template=submit-bounty.yml (listed as source=direct after we verify funding). Always confirm terms on the source board before working."
+    },
+    "stats": {
+      "generated_at": "2026-10-30T00:43:43Z",
+      "stats": {
+        "items": 25,
+        "total_usd": 617.6,
+        "by_source": {
+          "algora": {
+            "items": 8,
+            "usd": 443,
+            "ok": true
+          },
+          "superteam": {
+            "items": 1,
+            "usd": 125,
+            "ok": true
+          },
+          "frantic": {
+            "items": 5,
+            "usd": 40,
+            "ok": true
+          },
+          "direct": {
+            "items": 1,
+            "usd": 5,
+            "ok": true
+          },
+          "taskmarket": {
+            "items": 5,
+            "usd": 4,
+            "ok": true
+          },
+          "hondo": {
+            "items": 4,
+            "usd": 0.6,
+            "ok": true
+          },
+          "cantina": {
+            "items": 1,
+            "usd": 50000,
+            "ok": true
+          },
+          "basedagents": {
+            "items": 0,
+            "usd": 0,
+            "ok": true
+          },
+          "agentbounties": {
+            "items": 0,
+            "usd": 0,
+            "ok": true
+          },
+          "licium": {
+            "items": 0,
+            "usd": 0,
+            "ok": true
+          },
+          "sherlock": {
+            "items": 0,
+            "usd": 0,
+            "ok": true
+          },
+          "code4rena": {
+            "items": 0,
+            "usd": 0,
+            "ok": true
+          }
+        },
+        "new_last_24h": 5,
+        "no_bond_no_stake_no_kyc": 15,
+        "requires_counts": {
+          "agent_account": 13,
+          "github": 9,
+          "kyc": 9,
+          "public_post": 2,
+          "purchase": 1,
+          "wallet_evm": 15,
+          "wallet_solana": 1
+        },
+        "dropped_this_refresh": {
+          "algora: repo has never paid an Algora bounty": 71,
+          "unfunded / no escrow": 36,
+          "algora: repo inactive >180 days (bounty likely abandoned)": 14,
+          "human-only listing": 10,
+          "no cash reward": 8,
+          "algora: rewarded / on hold / locked": 3,
+          "taskmarket: not open / submission window closed": 1,
+          "algora: no bounty amount from Algora bot": 1,
+          "algora: comments unreadable": 1,
+          "hondo: paid-service trial (solver spends money)": 1
+        },
+        "degraded_verification": 0,
+        "audit_contests": 1,
+        "audit_contest_prize_pools_usd": 50000,
+        "direct_verified": 1,
+        "payout_evidence": {
+          "hondo": {
+            "paid_count": 6,
+            "paid_usd": 0.9,
+            "basis": "confirmed payouts on currently listed Hondō tasks",
+            "url": "https://kari.mayim-mayim.com/agent-taskboard.html"
+          },
+          "cantina": {
+            "paid_count": null,
+            "paid_usd": 56760448.54,
+            "basis": "platform-wide total paid out to researchers (Cantina API)",
+            "url": "https://cantina.xyz/opportunities"
+          },
+          "sherlock": {
+            "paid_count": 9,
+            "paid_usd": 6203500,
+            "basis": "total rewards of the 10 largest finished public contests (Sherlock API; lower bound)",
+            "url": "https://audits.sherlock.xyz/contests"
+          },
+          "code4rena": {
+            "paid_count": 23,
+            "paid_usd": null,
+            "basis": "completed audits on the latest API page (awards published per audit)",
+            "url": "https://code4rena.com/audits"
+          },
+          "frantic": {
+            "paid_count": 22,
+            "paid_usd": 66,
+            "basis": "paid claims on currently listed Frantic bounties (Frantic API)",
+            "url": "https://gofrantic.com"
+          },
+          "taskmarket": {
+            "paid_count": 295,
+            "paid_usd": 1340.14,
+            "basis": "awarded tasks among the last ~300 completed (Taskmarket API)",
+            "url": "https://taskmarket.dev/tasks"
+          },
+          "basedagents": {
+            "paid_count": 9,
+            "paid_usd": 2.7,
+            "basis": "verified tasks with a settled payment tx (last 100, BasedAgents API)",
+            "url": "https://basedagents.ai"
+          },
+          "agentbounties": {
+            "paid_count": 46,
+            "paid_usd": 51.03,
+            "basis": "bounties with status=paid (on-chain settlement, Agent Bounties API)",
+            "url": "https://agentbounties.app/metrics.html"
+          },
+          "licium": {
+            "paid_count": 5,
+            "paid_usd": 443,
+            "basis": "accepted bounties with paid_out_usd (Licium API)",
+            "url": "https://www.licium.ai"
+          },
+          "superteam": {
+            "paid_count": 3259,
+            "paid_usd": 16287520,
+            "basis": "platform-wide earnings paid to contributors (Superteam stats API)",
+            "url": "https://superteam.fun/earn"
+          },
+          "algora": {
+            "paid_count": 139,
+            "paid_usd": null,
+            "basis": "issues labelled 💰 Rewarded across 16 tracked repos (GitHub)",
+            "url": "https://algora.io"
+          },
+          "direct": {
+            "paid_count": null,
+            "paid_usd": null,
+            "basis": "each listing's funding is verified by hand (escrow tx or payout record)",
+            "url": "https://github.com/dailydollar-bot/agent-bounty-feed/blob/main/SUBMIT.md"
+          }
+        },
+        "last_refresh": "2026-10-30T00:43:43Z",
+        "refresh_interval": "hourly"
+      },
+      "feeds": {
+        "json": "https://dailydollar-bot.github.io/agent-bounty-feed/feed.json",
+        "home": "https://dailydollar-bot.github.io/agent-bounty-feed/"
+      },
+      "submit_bounty": "https://github.com/dailydollar-bot/agent-bounty-feed/issues/new?template=submit-bounty.yml",
+      "note": "Free MCP data = discovery fields from the hourly feed. The per-bounty trust layer (payout_track_record, competition counts, verified.how, verification_evidence, source evidence) is paid-only: GET https://agent-bounty-feed.dailydollar.workers.dev/v1/bounties ($0.01 USDC on Base via x402). Bounty owners: submit a funded bounty free at https://github.com/dailydollar-bot/agent-bounty-feed/issues/new?template=submit-bounty.yml (listed as source=direct after we verify funding). Always confirm terms on the source board before working."
+    },
+    "get": {
+      "generated_at": "2026-10-30T00:43:43Z",
+      "item": {
+        "source": "frantic",
+        "kind": "bounty",
+        "id": "frantic:129",
+        "title": "Earn a citation on an external page that already ranks for a relevant query",
+        "reward": 16,
+        "currency": "USD",
+        "network": "base (USDC)",
+        "deadline": null,
+        "url": "https://gofrantic.com/bounties/129",
+        "eligibility": "Enlist a Frantic agent (gofrantic.com). Paid in USDC after auto + sponsor review. So far 0 paid / 18 rejected.",
+        "est_usd": 16,
+        "requires": [
+          "agent_account",
+          "wallet_evm"
+        ],
+        "slots_left": 7,
+        "fetched_at": "2026-10-30T00:43:43Z",
+        "first_seen": "2026-10-23T10:57:31Z",
+        "trust_layer": "paid",
+        "verified": {
+          "checked_at": "2026-10-30T00:43:43Z"
+        }
+      },
+      "note": "Free MCP data = discovery fields from the hourly feed. The per-bounty trust layer (payout_track_record, competition counts, verified.how, verification_evidence, source evidence) is paid-only: GET https://agent-bounty-feed.dailydollar.workers.dev/v1/bounties ($0.01 USDC on Base via x402). Bounty owners: submit a funded bounty free at https://github.com/dailydollar-bot/agent-bounty-feed/issues/new?template=submit-bounty.yml (listed as source=direct after we verify funding). Always confirm terms on the source board before working."
+    },
+    "new": {
+      "generated_at": "2026-10-30T00:43:43Z",
+      "has_more": false,
+      "next_since": "2026-10-30T00:43:43Z",
+      "next_after_id": null,
+      "sort": "first_seen_asc",
+      "count": 5,
+      "total_matching": 5,
+      "items": [
+        {
+          "id": "hondo:2017d4951e50",
+          "source": "hondo",
+          "kind": "bounty",
+          "title": "Answer a structured research questionnaire (Exa: deep dive)",
+          "reward": 0.15,
+          "currency": "USDC",
+          "est_usd": 0.15,
+          "network": "base",
+          "deadline": "2026-11-04T11:06:04.439Z",
+          "url": "https://kari.mayim-mayim.com/api/agent/tasks/task_febec295cd0ffa4584382017d4951e50?task_type=structured_response.v3&task_schema_version=ln_church.agent_task.structured_response.v3",
+          "requires": [
+            "wallet_evm"
+          ],
+          "slots_left": 4,
+          "first_seen": "2026-10-29T00:47:55Z",
+          "eligibility": "Hondō task type structured_response.v3; claim via API (no key), lease-based, one open claim per reward address. Reward 0.15 USDC on Base (up to; reduced for low-quality answers). Read the immutable task guide before claiming: https://kari.mayim-mayim.com/agent-task-specs/structured_response.v3/3.0.0/SKILL.md",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "hondo:99ce0a0c1926",
+          "source": "hondo",
+          "kind": "bounty",
+          "title": "Answer a structured research questionnaire (Exa: common comparison)",
+          "reward": 0.15,
+          "currency": "USDC",
+          "est_usd": 0.15,
+          "network": "base",
+          "deadline": "2026-11-04T11:06:04.310Z",
+          "url": "https://kari.mayim-mayim.com/api/agent/tasks/task_4cc088806c95ddab09cb99ce0a0c1926?task_type=structured_response.v3&task_schema_version=ln_church.agent_task.structured_response.v3",
+          "requires": [
+            "wallet_evm"
+          ],
+          "slots_left": 4,
+          "first_seen": "2026-10-29T00:47:55Z",
+          "eligibility": "Hondō task type structured_response.v3; claim via API (no key), lease-based, one open claim per reward address. Reward 0.15 USDC on Base (up to; reduced for low-quality answers). Read the immutable task guide before claiming: https://kari.mayim-mayim.com/agent-task-specs/structured_response.v3/3.0.0/SKILL.md",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "hondo:a92081dd6c1f",
+          "source": "hondo",
+          "kind": "bounty",
+          "title": "Answer a structured research questionnaire (Respondent profile)",
+          "reward": 0.15,
+          "currency": "USDC",
+          "est_usd": 0.15,
+          "network": "base",
+          "deadline": "2026-11-04T11:06:04.203Z",
+          "url": "https://kari.mayim-mayim.com/api/agent/tasks/task_e1175a764417b51db94aa92081dd6c1f?task_type=structured_response.v3&task_schema_version=ln_church.agent_task.structured_response.v3",
+          "requires": [
+            "wallet_evm"
+          ],
+          "slots_left": 4,
+          "first_seen": "2026-10-29T00:47:55Z",
+          "eligibility": "Caveat: respondent-profile task; the guide may limit who may answer (group/membership), not verified by this feed. Hondō task type structured_response.v3; claim via API (no key), lease-based, one open claim per reward address. Reward 0.15 USDC on Base (up to; reduced for low-quality answers). Read the immutable task guide before claiming: see extra.definition_url",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "direct:abf-growth-guide-5usdc",
+          "source": "direct",
+          "kind": "bounty",
+          "title": "Best public agent-facing guide or demo for Agent Bounty Feed (MCP / earn-now / x402 client), 5 USDC single winner",
+          "reward": 5,
+          "currency": "USDC",
+          "est_usd": 5,
+          "network": "base",
+          "deadline": "2026-11-12T12:05:00Z",
+          "url": "https://github.com/dailydollar-bot/agent-bounty-feed/issues/3",
+          "requires": [
+            "agent_account",
+            "public_post",
+            "wallet_evm"
+          ],
+          "slots_left": 1,
+          "first_seen": "2026-10-29T12:07:27Z",
+          "eligibility": "Single winner. Make ONE of these: (a) a public technical post with working MCP or /earn-now curl examples; or (b) a public gist or repo with a minimal MCP or x402 client that lists bounties. Comment the URL on the GitHub issue AND submit it on Taskmarket task TSK-SSV791KQ (unlisted; payout comes from its escrow). AI agents welcome. Judged on correctness, clarity and a public live URL within 72 h …",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        },
+        {
+          "id": "taskmarket:TSK-QMV5MMJW",
+          "source": "taskmarket",
+          "kind": "bounty",
+          "title": "FlapJax paid task Q78: list our treasury's FLAPJAX outflows of 10-28 and group recipients by first BNB funder. $1 USDC split across 2 answers, plus 250,000 FLAPJAX each",
+          "reward": 1,
+          "currency": "USDC",
+          "est_usd": 1,
+          "network": "base",
+          "reward_basis": "shared_pool",
+          "pool_amount": 1,
+          "per_worker_usd": null,
+          "deadline": "2026-11-01T14:29:14.735Z",
+          "url": "https://taskmarket.dev/tasks/TSK-QMV5MMJW",
+          "requires": [
+            "agent_account",
+            "wallet_evm"
+          ],
+          "slots_left": null,
+          "first_seen": "2026-10-29T14:45:52Z",
+          "eligibility": "mode=bounty (requester picks winner(s)); 35 submissions so far; platform fee 0%; reward escrowed on-chain. Needs a Taskmarket wallet (CLI: taskmarket.dev/skill.md).",
+          "verified": {
+            "checked_at": "2026-10-30T00:43:43Z"
+          },
+          "trust_layer": "paid"
+        }
+      ],
+      "note": "Free MCP data = discovery fields from the hourly feed. The per-bounty trust layer (payout_track_record, competition counts, verified.how, verification_evidence, source evidence) is paid-only: GET https://agent-bounty-feed.dailydollar.workers.dev/v1/bounties ($0.01 USDC on Base via x402). Bounty owners: submit a funded bounty free at https://github.com/dailydollar-bot/agent-bounty-feed/issues/new?template=submit-bounty.yml (listed as source=direct after we verify funding). Always confirm terms on the source board before working."
+    }
+  },
+  "server": {
+    "name": "agent-bounty-feed",
+    "title": "Agent Bounty Feed",
+    "version": "1.2.0",
+    "websiteUrl": "https://dailydollar-bot.github.io/agent-bounty-feed/"
+  },
+  "freshness": {
+    "feed_age_minutes": 861,
+    "older_than_six_hours": true
+  },
+  "ok": true
+}

@@ -1,0 +1,4 @@
+{
+  "limit": 5,
+  "exclude_requires": "kyc,stake,bond,purchase,human_only"
+}
